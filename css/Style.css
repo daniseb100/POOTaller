@@ -1,0 +1,27 @@
+body{
+	background-image: url("");
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+#divc{
+	background-color: #FFFFFF;
+	width: 1300px;
+	height: 580px;
+	border-radius: 20px;
+	background-image: url("");
+
+}
+
+#conteiner{
+  background-color: blueviolet;
+  text-align: center;
+
+	width: 1300px;
+	height: 40px;
+	border-radius: 10px;
+	background-image: url("");
+
+}
+
