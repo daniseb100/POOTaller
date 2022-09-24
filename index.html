@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
-
+<center>
 <body class="bg-light">
     <form id="form-registro">
         <fieldset class="form-group border p-3">
@@ -47,7 +47,8 @@
                             <img src="https://img.freepik.com/vector-gratis/concepto-empleado-mes-laureles_23-2148466232.jpg?w=2000" class="figure-img img-fluid rounded" alt="...">
                             <figcaption class="figure-caption">Foto del Empleado.</figcaption>
                         </figure>
-                    </div>
+                    </div> 
+
                 </div>
             </div>
         </fieldset><br>
@@ -68,6 +69,7 @@
             <legend class="w-auto px-2">Impuesto</legend>
             <div class="container" id="conte2" align="center">
                 <div class="input-group mb-3">
+
                     <span class="input-group-text">$</span>
                     <label class="form-control" aria-label="Amount (to the nearest dollar) " align="left" id="impuesto"></label>
                     <span class="input-group-text">.00</span>
@@ -79,6 +81,7 @@
         <fieldset class="form-group border p-3">
             <legend class="w-auto px-2">Cálculos</legend>
             <div class="container" id="conte2" align="center">
+                <div class="row">
                 <div class="input-group mb-3">
                     <button type="button" class="btn btn-primary" onclick="calcularEdad()">Calcular Edad</button>
                     <label type="text" class="form-control" id="edad"></label>
@@ -93,7 +96,14 @@
                     <button type="button" class="btn btn-primary" onclick="prestaciones()">Calcular Prestaciones</button>
                     <label type="text" class="form-control" id="pres"></label>
                 </div>
-
+                <div class="col">
+                        <figure class="figure">
+                            <img  src=" https://www.uc.cl/site/assets/files/10450/math2.700x532.jpg" class="figure-img img-fluid rounded" alt="...">
+                            <figcaption class="figure-caption">Impuestos.</figcaption>
+                        </figure>
+                      
+                    </div>
+               </div>
                 <form id="contenedor">
                     <div class="input-group mb-3" id="contenedor">
 
@@ -127,10 +137,11 @@
                 <form id="contenedor">
                     <div class="input-group mb-3" id="contenedor">
 
-                        <label type="form-label">salario total de las prestaciones:</label>
+                        <label type="form-label">Total de Prestaciones:</label>
                         <label type="text" class="form-control" id="salpre"></label>
                     </div>
                 </form>
+
 
             </div>
         </fieldset><br>
@@ -150,5 +161,5 @@
     </form>
     <script type="text/javascript" src="js/funciones.js"></script>
 </body>
-
+</center>
 </html>

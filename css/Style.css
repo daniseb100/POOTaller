@@ -1,5 +1,5 @@
 body {
-    background-image: url("");
+    background-image: url("https://images3.alphacoders.com/592/592328.jpg");
     background-color: transparent;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -8,7 +8,7 @@ body {
 
 #divc {
     background-color: #D4EFDF;
-    width: 1300px;
+    width: 1000px;
     height: 580px;
     border-radius: 20px;
     background-image: url("");
@@ -16,7 +16,7 @@ body {
 
 #contenedor {
     text-align: center;
-    width: 1100px;
+    width: 700px;
     height: 40px;
     border-radius: 10px;
     background-image: url("");
@@ -28,7 +28,7 @@ fieldset {
     border-color: darkgoldenrod;
     border: 9px groove (internal value);
     border-radius: 7px;
-    width: 1200px
+    width: 800px
 }
 
 legend {

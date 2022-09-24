@@ -114,7 +114,7 @@ function SalarioTotal() {
 
 function ImpuestosPrestaciones() {
 
-    let imppre = ((calcularYeards(empleado.fin) * empleado.sal) / 12) * (empleado.imp) / 100;
+    let imppre = ((empleado.sal) - (empleado.sal) * (empleado.imp) / 100) * calcularYeards(empleado.fin)/12 * (empleado.imp) / 100  ;
     document.getElementById('imppre').innerHTML = "" + imppre;
     alert("La cantidad de impuestos a pagar por las prestaciones es de:" + imppre);
 
@@ -122,7 +122,7 @@ function ImpuestosPrestaciones() {
 
 function SalarioTotalPrestaciones() {
 
-    let salpre = ((calcularYeards(empleado.fin) * empleado.sal) / 12) - ((calcularYeards(empleado.fin) * empleado.sal) / 12) * (empleado.imp) / 100;
+    let salpre = ((empleado.sal) - (empleado.sal) * (empleado.imp) / 100) * calcularYeards(empleado.fin)/12 -(((empleado.sal) - (empleado.sal) * (empleado.imp) / 100) * calcularYeards(empleado.fin)/12 * (empleado.imp) / 100);
     document.getElementById('salpre').innerHTML = "" + salpre;
     alert("la cantidad libre de las prestaciones es de:" + salpre);
 
