@@ -1,27 +1,37 @@
-body{
-	background-image: url("");
-	background-color: transparent;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-}
-#divc{
-	background-color: #FFFFFF;
-	width: 1300px;
-	height: 580px;
-	border-radius: 20px;
-	background-image: url("");
-
+body {
+    background-image: url("");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-#conteiner{
-  background-color: blueviolet;
-  text-align: center;
-
-	width: 1300px;
-	height: 40px;
-	border-radius: 10px;
-	background-image: url("");
-
+#divc {
+    background-color: #D4EFDF;
+    width: 1300px;
+    height: 580px;
+    border-radius: 20px;
+    background-image: url("");
 }
 
+#contenedor {
+    text-align: center;
+    width: 1100px;
+    height: 40px;
+    border-radius: 10px;
+    background-image: url("");
+}
+
+fieldset {
+    background-color: #FAD7A0;
+    color: firebrick;
+    border-color: darkgoldenrod;
+    border: 9px groove (internal value);
+    border-radius: 7px;
+    width: 1200px
+}
+
+legend {
+    color: black;
+    font-weight: bold
+}

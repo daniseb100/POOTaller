@@ -1,147 +1,154 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Sistema de Empleados</title>
-	<link rel="stylesheet" type="text/css" href="css/Style.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sistema de Empleados</title>
+    <link rel="stylesheet" type="text/css" href="css/Style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
-<body>
 
-	<label for="divc1">Datos Personales</label>
-    <div class="container"  id="divc1">
-        <div class="row">
-            <div class="col">
-                <div class="mb-3">
-                    <label for="nombre" class="form-label" id="nom">Nombre:</label>
-                    <label  class="form-control" id="nombre">Nombre</label>
-                </div>
-                
-                <div class="mb-3">
-                    <label for="ape" class="form-label">Apellido:</label>
-                    <label class="form-control" id="ape" >Apellido</label>
-                </div>
-                
-                <div class="mb-3"> 
-                    <label for="sex" class="form-label">Sexo:</label>
-                    <label class="form-control"  id="sex">sexo</label>
-                </div>
-                
-                <div class="mb-3">
-                    <label for="fna">Fecha de Nacimiento:</label>
-                    <label class="form-control" id="fna">dd-mm-aaaa</label>
-                </div>
-                
-                <div class="mb-3">
-                <label for="fing">Fecha de Ingreso:</label>
-                <label class="form-control" id="fing">dd-mm-aaaa</label>
+<body class="bg-light">
+    <form id="form-registro">
+        <fieldset class="form-group border p-3">
+            <legend class="w-auto px-2">Datos Personales</legend>
+            <div class="container" id="conte1">
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label" id="nomb">Nombre:</label>
+                            <label class="form-control" id="nombre">Nombre</label>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="apel" class="form-label">Apellido:</label>
+                            <label class="form-control" id="ape">Apellido</label>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="sex" class="form-label">Sexo:</label>
+                            <label class="form-control" id="sex">sexo</label>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="fna">Fecha de Nacimiento:</label>
+                            <label class="form-control" id="fna">dd-mm-aaaa</label>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="fing">Fecha de Ingreso:</label>
+                            <label class="form-control" id="fing">dd-mm-aaaa</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <figure class="figure">
+                            <img src="https://img.freepik.com/vector-gratis/concepto-empleado-mes-laureles_23-2148466232.jpg?w=2000" class="figure-img img-fluid rounded" alt="...">
+                            <figcaption class="figure-caption">Foto del Empleado.</figcaption>
+                        </figure>
+                    </div>
                 </div>
             </div>
-            <div class="col">
-                <figure class="figure">
-                    <img src="https://aihgroup.com.mx/blog/wp-content/uploads/2019/07/16.jpg" class="figure-img img-fluid rounded" alt="...">
-                    <figcaption class="figure-caption">Foto del Empleado.</figcaption>
-                  </figure>
+        </fieldset><br>
+
+        <fieldset class="form-group border p-3">
+            <legend class="w-auto px-2">Salario</legend>
+            <div class="container" id="conte2" align="center">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">$</span>
+                    <label class="form-control" aria-label="Amount (to the nearest dollar) " align="left" id="salario"></label>
+                    <span class="input-group-text">.00</span>
+                    <button type="button" class="btn btn-primary" onclick="nuevoSal()">Modificar</button>
+                </div>
             </div>
-        </div>    
-    </div> 
+        </fieldset><br>
 
-    <label for="divc2">Salario</label>
-    <div class="container"  id="divc2" align="center">
-        
-        <div class="input-group mb-3">
-            <span class="input-group-text">$</span>
-            <label class="form-control" aria-label="Amount (to the nearest dollar) "align="left" id="salario"></label>
-            <span class="input-group-text">.00</span>
-            <button type="button" class="btn btn-primary" onclick="nuevoSal()">Modificar</button>
-        </div>
+        <fieldset class="form-group border p-3">
+            <legend class="w-auto px-2">Impuesto</legend>
+            <div class="container" id="conte2" align="center">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">$</span>
+                    <label class="form-control" aria-label="Amount (to the nearest dollar) " align="left" id="impuesto"></label>
+                    <span class="input-group-text">.00</span>
+                    <button type="button" class="btn btn-primary" onclick="nuevoImp()">Modificar Impuestos</button>
+                </div>
+            </div>
+        </fieldset><br>
 
-       
+        <fieldset class="form-group border p-3">
+            <legend class="w-auto px-2">Cálculos</legend>
+            <div class="container" id="conte2" align="center">
+                <div class="input-group mb-3">
+                    <button type="button" class="btn btn-primary" onclick="calcularEdad()">Calcular Edad</button>
+                    <label type="text" class="form-control" id="edad"></label>
+                </div>
 
-    </div>
+                <div class="input-group mb-3">
+                    <button type="button" class="btn btn-primary" onclick="calcularAnt()">Calcular Antigüedad</button>
+                    <label type="text" class="form-control" id="ant"></label>
+                </div>
 
+                <div class="input-group mb-3">
+                    <button type="button" class="btn btn-primary" onclick="prestaciones()">Calcular Prestaciones</button>
+                    <label type="text" class="form-control" id="pres"></label>
+                </div>
 
-    <label for="divc2">Impuesto</label>
-    <div class="container"  id="divc2" align="center">
-     <div class="input-group mb-3">
-            <span class="input-group-text">$</span>
-            <label class="form-control" aria-label="Amount (to the nearest dollar) "align="left" id="impuesto"></label>
-            <span class="input-group-text">.00</span>
-            <button type="button" class="btn btn-primary" onclick="nuevoImp()">Modificar Impuestos</button>
-        </div>
-     </div>
+                <form id="contenedor">
+                    <div class="input-group mb-3" id="contenedor">
 
-    <label for="divc2">Cálculos</label>
-    <div class="container"  id="divc2" align="center">
-        
-        <div class="input-group mb-3">
-            <button type="button" class="btn btn-primary" onclick="calcularEdad()" >Calcular Edad</button>
-            <label type="text" class="form-control"id="edad"></label>
-        </div>
+                        <label type="form-label">Impuestos:</label>
+                        <label type="text" class="form-control" id="imp"></label>
+                    </div>
+                </form>
 
-        <div class="input-group mb-3">
-            <button type="button" class="btn btn-primary" onclick="calcularAnt()" >Calcular Antigüedad</button>
-            <label type="text" class="form-control" id="ant"></label>
-        </div>
+                <br>
 
-        <div class="input-group mb-3">
-            <button type="button" class="btn btn-primary" onclick="prestaciones()">Calcular Prestaciones</button>
-            <label type="text" class="form-control" id="pres"></label>
-        </div>
-        <form id="conteiner">
-        <div class="input-group mb-3" id="conteiner">
+                <form id="contenedor">
+                    <div class="input-group mb-3" id="contenedor">
 
-            <label type="form-label">Impuestos:</label>
-            <label type="text" class="form-control" id="imp"></label>
-        </div>
-       </form>
+                        <label type="form-label">Salario Total:</label>
+                        <label type="text" class="form-control" id="salt"></label>
+                    </div>
+                </form>
 
-       <br>
+                <br>
 
-       <form id="conteiner">
-        <div class="input-group mb-3" id="conteiner">
+                <form id="contenedor">
+                    <div class="input-group mb-3" id="contenedor">
 
-            <label type="form-label">Salario Total:</label>
-            <label type="text" class="form-control" id="salt"></label>
-        </div>
-       </form>
+                        <label type="form-label">Impuestos de las prestaciones:</label>
+                        <label type="text" class="form-control" id="imppre"></label>
+                    </div>
+                </form>
 
-       <br>
+                <br>
 
-       <form id="conteiner">
-        <div class="input-group mb-3" id="conteiner">
+                <form id="contenedor">
+                    <div class="input-group mb-3" id="contenedor">
 
-            <label type="form-label">Impuestos de las prestaciones:</label>
-            <label type="text" class="form-control" id="imppre"></label>
-        </div>
-       </form>
+                        <label type="form-label">salario total de las prestaciones:</label>
+                        <label type="text" class="form-control" id="salpre"></label>
+                    </div>
+                </form>
 
-       <br>
+            </div>
+        </fieldset><br>
 
-       <form id="conteiner">
-        <div class="input-group mb-3" id="conteiner">
+        <fieldset class="form-group border p-3">
+            <legend class="w-auto px-2">Puntos de Extención</legend>
+            <div class="container" id="divc3" align="center">
+                <button type="button" class="btn btn-primary" onclick="impuestos()">Impuestos</button>
 
-            <label type="form-label">salario total de las prestaciones:</label>
-            <label type="text" class="form-control" id="salpre"></label>
-        </div>
-       </form>
+                <button type="button" class="btn btn-primary" onclick="SalarioTotal()">Salario Total</button>
 
-    </div>
+                <button type="button" class="btn btn-primary" onclick="ImpuestosPrestaciones()">Impuestos Prestaciones</button>
 
-    <label for="divc3">Puntos de Extención</label>
-    <div class="container"  id="divc3" align="center">
-        <button type="button" class="btn btn-primary" onclick="impuestos()">Impuestos</button>
-
-        <button type="button" class="btn btn-primary" onclick="SalarioTotal()">Salario Total</button>
-        
-        <button type="button" class="btn btn-primary"onclick="ImpuestosPrestaciones()">Impuestos Prestaciones</button>
-        
-        <button type="button" class="btn btn-primary" onclick="SalarioTotalPrestaciones()">salario Total Prestaciones</button>
-
-
-    </div>
-    <script type="text/javascript" src="js/functions.js"></script>
+                <button type="button" class="btn btn-primary" onclick="SalarioTotalPrestaciones()">salario Total Prestaciones</button>
+            </div>
+        </fieldset><br>
+    </form>
+    <script type="text/javascript" src="js/funciones.js"></script>
 </body>
+
 </html>
